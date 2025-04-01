@@ -5,6 +5,7 @@ Genre reconigtion of musics, using concepts from signals and systems lessons
 
 - **Augmentation Audios**: Módulo relacionado à limpeza e pré-processamento do áudio. *(Obs: Ayres mencionou que não é necessário se preocupar com esta etapa).*
 - **FeatureExtract**: Responsável pela extração de características do áudio e conversão dos dados para `.csv`.
+- **Model**
 
 ## 🔍 Extração de Features
 
@@ -46,3 +47,8 @@ O modelo utilizado realiza o seguinte:
 ### 🔍 Analise exploratória
 - Através de gráficos, é realizada uma análise exploratória dos dados, com tempo, RMS e envelopamento médio dos gêneros sendo exibidos nos gráficos em barra;
 - Após isso utilizamos uma matriz de confusão para verificar e avaliar a precisão das predições do modelo;
+
+### 🤖 Modelagem e Avaliação  
+- Prepara os dados e divide em **treino (80%)** e **teste (20%)**.  
+- Treina um modelo `GradientBoostingClassifier`.  
+- Avalia **precisão** e **importância das features**
