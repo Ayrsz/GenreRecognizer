@@ -40,7 +40,7 @@ O método `get_hog(spectrogram)` realiza os seguintes passos:
 O modelo utilizado realiza o seguinte:
 
 ### 🎲 Carregamento e vizualização  dos dados
-= Utilizando pandas, carregamos o arquivo CSV e fazemos uma vizualização dos dados em tabela, o que permite entender a estrutura e as características do arquivo.
+- Utilizando pandas, carregamos o arquivo CSV e fazemos uma vizualização dos dados em tabela, o que permite entender a estrutura e as características do arquivo.
 - Após isso, fazemos um tratamento para normalizar os dados, mapeando classes em números
 
 ### 🔍 Analise exploratória
