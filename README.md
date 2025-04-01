@@ -21,8 +21,9 @@ A extração é dividida em três domínios principais:
    - **Tempo (ritmo)**: Determina a pulsação principal do áudio, útil para análise rítmica.
 
 ### 2️⃣ Domínio da Frequência
-#### 🔹 Low-Level Feature
+#### 🔹 Low-Level Features
    - **Média das Frequências Ponderadas**: Calcula a média das frequências, ponderadas pela amplitude de cada amostra em cada quadro de análise. Utiliza a Transformada Rápida de Fourier (FFT).
+   - **Bandwidth**: Calcula grau de "espalhamento" do espectro de um audio para cada frame.
 
 #### 🔹 High-Level Feature
    - **MFCC (Mel-Frequency Cepstral Coefficients)**: Extrai os coeficientes cepstrais de frequência mel, calculando estatísticas como média e desvio padrão.
