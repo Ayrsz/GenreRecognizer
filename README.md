@@ -35,3 +35,14 @@ O método `get_hog(spectrogram)` realiza os seguintes passos:
    2. Calcula os **Histogram of Oriented Gradients (HOG)**.
    3. Retorna estatísticas da feature extraída.
 
+## 🏋️ Modelo
+
+O modelo utilizado realiza o seguinte:
+
+### 🎲 Carregamento e vizualização  dos dados
+= Utilizando pandas, carregamos o arquivo CSV e fazemos uma vizualização dos dados em tabela, o que permite entender a estrutura e as características do arquivo.
+- Após isso, fazemos um tratamento para normalizar os dados, mapeando classes em números
+
+### 🔍 Analise exploratória
+- Através de gráficos, é realizada uma análise exploratória dos dados, com tempo, RMS e envelopamento médio dos gêneros sendo exibidos nos gráficos em barra;
+- Após isso utilizamos uma matriz de confusão para verificar e avaliar a precisão das predições do modelo;
