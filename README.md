@@ -52,3 +52,6 @@ O modelo utilizado realiza o seguinte:
 - Prepara os dados e divide em **treino (80%)** e **teste (20%)**.  
 - Treina um modelo `GradientBoostingClassifier`.  
 - Avalia **precisão** e **importância das features**
+
+## Como rodar?
+- Mudança do diretório padrão, variavel com o nome "path_root" ou "new_path", substituir pelo diretório com a pasta "Data" oferecida em *link do drive*, faça uma cópia para sua pasta pessoal. Caso dê algum erro entrar em contato com mas11@cin.ufpe.br, não é necessário rodar o "Feature extract" nem o "Augmentation" pois eles já estão sintetizados nessa pasta. As visualizações necessárias já estão no Model.ipynb.
