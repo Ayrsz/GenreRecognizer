@@ -1,14 +1,10 @@
 # SignalAndSistemProject
 Genre reconigtion of musics, using concepts from signals and systems lessons
 
-# FeatureExtract: Extração de Features de Áudio
-
-Este projeto realiza a extração de características de arquivos de áudio no formato `.wav` e imagens de espectrogramas, gerando um arquivo `.csv` com as informações extraídas.
-
 ## 📂 Estrutura do Projeto
 
 - **Augmentation Audios**: Módulo relacionado à limpeza e pré-processamento do áudio. *(Obs: Ayres mencionou que não é necessário se preocupar com esta etapa).*
-- **Feature_Extract**: Responsável pela extração de características do áudio e conversão dos dados para `.csv`.
+- **FeatureExtract**: Responsável pela extração de características do áudio e conversão dos dados para `.csv`.
 
 ## 🔍 Extração de Features
 
@@ -39,7 +35,3 @@ O método `get_hog(spectrogram)` realiza os seguintes passos:
    2. Calcula os **Histogram of Oriented Gradients (HOG)**.
    3. Retorna estatísticas da feature extraída.
 
-Exemplo de uso:
-```python
-spectro = cv.imread("/caminho/para/imagem.png")
-features = get_hog(spectro)
