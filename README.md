@@ -5,7 +5,7 @@ Genre reconigtion of musics, using concepts from signals and systems lessons
 
 - **Augmentation Audios**: Módulo relacionado à aplicação de efeitos nos áudios do dataset
 - **FeatureExtract**: Responsável pela extração de características do áudio e conversão dos dados para `.csv`.
-- **Model**
+- **Model**: XGBoost
 
 ## 🔍 Extração de Features
 
