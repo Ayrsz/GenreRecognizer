@@ -3,7 +3,7 @@ Genre reconigtion of musics, using concepts from signals and systems lessons
 
 ## 📂 Estrutura do Projeto
 
-- **Augmentation Audios**: Módulo relacionado à limpeza e pré-processamento do áudio. *(Obs: Ayres mencionou que não é necessário se preocupar com esta etapa).*
+- **Augmentation Audios**: Módulo relacionado à aplicação de efeitos nos áudios do dataset
 - **FeatureExtract**: Responsável pela extração de características do áudio e conversão dos dados para `.csv`.
 - **Model**
 
