@@ -55,4 +55,5 @@ O modelo utilizado realiza o seguinte:
 - Avalia **precisão** e **importância das features**
 
 ## Como rodar?
-- Mudança do diretório padrão, variavel com o nome "path_root" ou "new_path", substituir pelo diretório com a pasta "Data" oferecida em [https://drive.google.com/drive/folders/107e-fKH4OFBDqLi9OSW54Woj1rsy3s9G?usp=sharing], faça uma cópia para sua pasta pessoal. Caso dê algum erro entrar em contato com mas11@cin.ufpe.br, não é necessário rodar o "Feature extract" nem o "Augmentation" pois eles já estão sintetizados nessa pasta. As visualizações necessárias já estão no Model.ipynb.
+- Mudança do diretório padrão, variavel com o nome "path_root" ou "new_path", substituir pelo diretório com a pasta "Data" oferecida em https://drive.google.com/drive/folders/1vxzl9tmki-r60igYsUWLxvowS1Rzasab?usp=sharing, faça uma cópia para sua pasta pessoal. Caso dê algum erro entrar em contato com mas11@cin.ufpe.br, não é necessário rodar o "Feature extract" nem o "Augmentation" pois eles já estão sintetizados nessa pasta. As visualizações necessárias já estão no Model.ipynb.
+
