@@ -1,59 +1,85 @@
-# SignalAndSistemProject
-Genre reconigtion of musics, using concepts from signals and systems lessons
+SignalAndSystemProject
 
-## 📂 Estrutura do Projeto
+Music genre recognition using concepts from Signals and Systems lessons
+📂 Project Structure
 
-- **Augmentation Audios**: Módulo relacionado à aplicação de efeitos nos áudios do dataset
-- **FeatureExtract**: Responsável pela extração de características do áudio e conversão dos dados para `.csv`.
-- **Model**: XGBoost
+    Augmentation Audios: Module related to applying audio effects to the dataset
 
-## 🔍 Extração de Features
+    FeatureExtract: Responsible for extracting audio features and converting the data to .csv
 
-A extração é dividida em três domínios principais:
+    Model: XGBoost
 
-### 1️⃣ Domínio do Tempo
-#### 🔹 Low-Level Features
-   - **Energy**: Mede a energia total do sinal em um determinado intervalo de tempo.
-   - **Zero-Cross-Rate**: Indica a taxa de cruzamentos por zero do sinal de áudio.
-   - **Amplitude Envelope**: Representa a variação da amplitude ao longo do tempo.
+🔍 Feature Extraction
 
-#### 🔹 High-Level Features
-   - **Tempo (ritmo)**: Determina a pulsação principal do áudio, útil para análise rítmica.
+The feature extraction process is divided into three main domains:
+1️⃣ Time Domain
+🔹 Low-Level Features
 
-### 2️⃣ Domínio da Frequência
-#### 🔹 Low-Level Features
-   - **Média das Frequências Ponderadas**: Calcula a média das frequências, ponderadas pela amplitude de cada amostra em cada quadro de análise. Utiliza a Transformada Rápida de Fourier (FFT).
-   - **Bandwidth**: Calcula grau de "espalhamento" do espectro de um audio para cada frame.
+    Energy: Measures the total energy of the signal within a given time interval.
 
-#### 🔹 High-Level Feature
-   - **MFCC (Mel-Frequency Cepstral Coefficients)**: Extrai os coeficientes cepstrais de frequência mel, calculando estatísticas como média e desvio padrão.
+    Zero-Crossing Rate: Indicates the rate at which the audio signal crosses zero.
 
-### 3️⃣ Features em Imagens de Espectrogramas
-Além das características extraídas diretamente dos sinais de áudio, o projeto também analisa espectrogramas para extrair descritores baseados em **Histogram of Oriented Gradients (HOG)**.
+    Amplitude Envelope: Represents the variation of amplitude over time.
 
-#### 🔹 Extração de HOG de Espectrogramas
-O método `get_hog(spectrogram)` realiza os seguintes passos:
-   1. Redimensiona a imagem do espectrograma.
-   2. Calcula os **Histogram of Oriented Gradients (HOG)**.
-   3. Retorna estatísticas da feature extraída.
+🔹 High-Level Features
 
-## 🏋️ Modelo
+    Tempo (Rhythm): Determines the main pulse of the audio, useful for rhythmic analysis.
 
-O modelo utilizado realiza o seguinte:
+2️⃣ Frequency Domain
+🔹 Low-Level Features
 
-### 🎲 Carregamento e vizualização  dos dados
-- Utilizando pandas, carregamos o arquivo CSV e fazemos uma vizualização dos dados em tabela, o que permite entender a estrutura e as características do arquivo.
-- Após isso, fazemos um tratamento para normalizar os dados, mapeando classes em números
+    Mean of Weighted Frequencies: Calculates the average frequency, weighted by the amplitude of each sample within each analysis frame using the Fast Fourier Transform (FFT).
 
-### 🔍 Analise exploratória
-- Através de gráficos, é realizada uma análise exploratória dos dados, com tempo, RMS e envelopamento médio dos gêneros sendo exibidos nos gráficos em barra;
-- Após isso utilizamos uma matriz de confusão para verificar e avaliar a precisão das predições do modelo;
+    Bandwidth: Measures the "spread" of the audio spectrum in each frame.
 
-### 🤖 Modelagem e Avaliação  
-- Prepara os dados e divide em **treino (80%)** e **teste (20%)**.  
-- Treina um modelo `GradientBoostingClassifier`.  
-- Avalia **precisão** e **importância das features**
+🔹 High-Level Feature
 
-## Como rodar?
-- Mudança do diretório padrão, variavel com o nome "path_root" ou "new_path", substituir pelo diretório com a pasta "Data" oferecida em https://drive.google.com/drive/folders/1vxzl9tmki-r60igYsUWLxvowS1Rzasab?usp=sharing, faça uma cópia para sua pasta pessoal. Caso dê algum erro entrar em contato com mas11@cin.ufpe.br, não é necessário rodar o "Feature extract" nem o "Augmentation" pois eles já estão sintetizados nessa pasta. As visualizações necessárias já estão no Model.ipynb.
+    MFCC (Mel-Frequency Cepstral Coefficients): Extracts the Mel-frequency cepstral coefficients, calculating statistics such as mean and standard deviation.
 
+3️⃣ Features from Spectrogram Images
+
+In addition to features extracted directly from the audio signals, the project also analyzes spectrogram images to extract descriptors based on Histogram of Oriented Gradients (HOG).
+🔹 HOG Extraction from Spectrograms
+
+The get_hog(spectrogram) method performs the following steps:
+
+    Resizes the spectrogram image.
+
+    Computes the Histogram of Oriented Gradients (HOG).
+
+    Returns statistics from the extracted features.
+
+🏋️ Model
+
+The model performs the following:
+🎲 Data Loading and Visualization
+
+    Using pandas, the CSV file is loaded and visualized as a table, helping to understand the structure and characteristics of the data.
+
+    Then, a preprocessing step normalizes the data and maps the class labels to numeric values.
+
+🔍 Exploratory Data Analysis
+
+    Through various plots, an exploratory analysis of the data is conducted, displaying genre-wise average Time, RMS, and Amplitude Envelope in bar charts.
+
+    A confusion matrix is then used to evaluate the accuracy of the model's predictions.
+
+🤖 Modeling and Evaluation
+
+    Prepares the dataset and splits it into training (80%) and testing (20%) sets.
+
+    Trains a GradientBoostingClassifier model.
+
+    Evaluates accuracy and feature importance.
+
+How to Run
+
+    Change the default directory variable named "path_root" or "new_path" to the directory containing the "Data" folder available at:
+    https://drive.google.com/drive/folders/1vxzl9tmki-r60igYsUWLxvowS1Rzasab?usp=sharing
+    Make a copy of this folder to your personal workspace.
+
+    You don’t need to run the FeatureExtract or Augmentation modules, as the processed data is already provided in this folder.
+
+    All necessary visualizations are available in the Model.ipynb notebook.
+
+If you encounter any issues, please contact mas11@cin.ufpe.br.
